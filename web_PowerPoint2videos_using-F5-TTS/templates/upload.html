@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音频&PPT上传</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles.css') }}">
+</head>
+<body>
+    <h1>音频&PPT上传</h1>
+
+        <h2>请上传/录制音频</h2>
+        <div class="flex-container">
+            <!-- 左边：上传音频 -->
+                <div class="left-column">
+                <form id="audio-form">
+                    <label>上传音频：</label>
+                    <input type="file" id="audio-file" accept="audio/*"><br><br>
+                    <button type="button" id="upload-audio">上传音频</button>
+                </form>
+            </div>
+
+            <!-- 右边：录制音频 -->
+            <div class="right-column">
+                <label>录制音频：</label>
+                <button type="button" id="start-record">开始录音</button>
+                <button type="button" id="stop-record" disabled>停止录音</button>
+            </div>
+            <hr/>
+        </div>
+
+        <h2>请上传PPT</h2>
+        <form id="ppt-form">
+            <label>上传PPT：</label>
+            <input type="file" id="ppt-file" accept=".ppt,.pptx"><br><br>
+            <button type="button" id="upload-ppt">上传PPT</button>
+        </form>
+        <hr/>
+    
+    <!-- 绑定机制 -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
