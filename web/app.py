@@ -6,7 +6,6 @@ app = Flask(__name__, static_folder="static", static_url_path="/static", templat
 
 # set path
 UPLOAD_FOLDER = 'uploads'
-AUDIO_FOLDER = os.path.join(UPLOAD_FOLDER, 'audio')
 PPT_FOLDER = os.path.join(UPLOAD_FOLDER, 'ppt')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(AUDIO_FOLDER, exist_ok=True)
